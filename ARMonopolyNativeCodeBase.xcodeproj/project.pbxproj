@@ -21,7 +21,6 @@
 		A55437B8189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A55437B7189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m */; };
 		A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5860D8F18A0A656004A2BE5 /* TestViewController.m */; };
 		A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */; };
-		A5D259E2189DEDB300E53CBA /* ARMAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D259E0189DEDB300E53CBA /* ARMAppController.m */; };
 		A5D6E4D718A0A8100007F04B /* installPlugin.sh in Resources */ = {isa = PBXBuildFile; fileRef = A5D6E4D618A0A8100007F04B /* installPlugin.sh */; };
 /* End PBXBuildFile section */
 
@@ -265,7 +264,6 @@
 			files = (
 				A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */,
 				A5543799189CA55C0076AC7D /* main.m in Sources */,
-				A5D259E2189DEDB300E53CBA /* ARMAppController.m in Sources */,
 				A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
