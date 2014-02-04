@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Samuel Howes. All rights reserved.
 //
 
-#import "ARMAppDelegate.h"
+#import "TestAppDelegate.h"
 
-@implementation ARMAppDelegate
+@implementation TestAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

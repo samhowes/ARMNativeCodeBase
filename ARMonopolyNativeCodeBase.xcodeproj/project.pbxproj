@@ -12,15 +12,17 @@
 		A5543791189CA55C0076AC7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5543790189CA55C0076AC7D /* UIKit.framework */; };
 		A5543797189CA55C0076AC7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5543795189CA55C0076AC7D /* InfoPlist.strings */; };
 		A5543799189CA55C0076AC7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5543798189CA55C0076AC7D /* main.m */; };
-		A554379D189CA55C0076AC7D /* ARMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A554379C189CA55C0076AC7D /* ARMAppDelegate.m */; };
 		A55437A0189CA55C0076AC7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A554379E189CA55C0076AC7D /* Main.storyboard */; };
-		A55437A3189CA55C0076AC7D /* ARMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55437A2189CA55C0076AC7D /* ARMViewController.m */; };
 		A55437A5189CA55C0076AC7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A55437A4189CA55C0076AC7D /* Images.xcassets */; };
 		A55437AC189CA55C0076AC7D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55437AB189CA55C0076AC7D /* XCTest.framework */; };
 		A55437AD189CA55C0076AC7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A554378C189CA55C0076AC7D /* Foundation.framework */; };
 		A55437AE189CA55C0076AC7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5543790189CA55C0076AC7D /* UIKit.framework */; };
 		A55437B6189CA55C0076AC7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A55437B4189CA55C0076AC7D /* InfoPlist.strings */; };
 		A55437B8189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A55437B7189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m */; };
+		A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5860D8F18A0A656004A2BE5 /* TestViewController.m */; };
+		A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */; };
+		A5D259E2189DEDB300E53CBA /* ARMAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D259E0189DEDB300E53CBA /* ARMAppController.m */; };
+		A5D6E4D718A0A8100007F04B /* installPlugin.sh in Resources */ = {isa = PBXBuildFile; fileRef = A5D6E4D618A0A8100007F04B /* installPlugin.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,17 +44,22 @@
 		A5543796189CA55C0076AC7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5543798189CA55C0076AC7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A554379A189CA55C0076AC7D /* ARMonopolyNativeCodeBase-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARMonopolyNativeCodeBase-Prefix.pch"; sourceTree = "<group>"; };
-		A554379B189CA55C0076AC7D /* ARMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARMAppDelegate.h; sourceTree = "<group>"; };
-		A554379C189CA55C0076AC7D /* ARMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMAppDelegate.m; sourceTree = "<group>"; };
 		A554379F189CA55C0076AC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A55437A1189CA55C0076AC7D /* ARMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARMViewController.h; sourceTree = "<group>"; };
-		A55437A2189CA55C0076AC7D /* ARMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMViewController.m; sourceTree = "<group>"; };
 		A55437A4189CA55C0076AC7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A55437AA189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARMonopolyNativeCodeBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55437AB189CA55C0076AC7D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A55437B3189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARMonopolyNativeCodeBaseTests-Info.plist"; sourceTree = "<group>"; };
 		A55437B5189CA55C0076AC7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A55437B7189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMonopolyNativeCodeBaseTests.m; sourceTree = "<group>"; };
+		A5860D8E18A0A656004A2BE5 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		A5860D8F18A0A656004A2BE5 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		A5860D9418A0A790004A2BE5 /* TestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppDelegate.h; sourceTree = "<group>"; };
+		A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppDelegate.m; sourceTree = "<group>"; };
+		A5D259DF189DEDB300E53CBA /* ARMAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMAppController.h; sourceTree = "<group>"; };
+		A5D259E0189DEDB300E53CBA /* ARMAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMAppController.m; sourceTree = "<group>"; };
+		A5D259E4189DEE4900E53CBA /* ARMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMViewController.m; sourceTree = "<group>"; };
+		A5D6E4D618A0A8100007F04B /* installPlugin.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = installPlugin.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +119,18 @@
 		A5543792189CA55C0076AC7D /* ARMonopolyNativeCodeBase */ = {
 			isa = PBXGroup;
 			children = (
-				A554379B189CA55C0076AC7D /* ARMAppDelegate.h */,
-				A554379C189CA55C0076AC7D /* ARMAppDelegate.m */,
+				A5D6E4D618A0A8100007F04B /* installPlugin.sh */,
+				A5860D9418A0A790004A2BE5 /* TestAppDelegate.h */,
+				A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */,
+				A5D259E4189DEE4900E53CBA /* ARMViewController.m */,
+				A5D259DF189DEDB300E53CBA /* ARMAppController.h */,
+				A5D259E0189DEDB300E53CBA /* ARMAppController.m */,
 				A554379E189CA55C0076AC7D /* Main.storyboard */,
 				A55437A1189CA55C0076AC7D /* ARMViewController.h */,
-				A55437A2189CA55C0076AC7D /* ARMViewController.m */,
 				A55437A4189CA55C0076AC7D /* Images.xcassets */,
 				A5543793189CA55C0076AC7D /* Supporting Files */,
+				A5860D8E18A0A656004A2BE5 /* TestViewController.h */,
+				A5860D8F18A0A656004A2BE5 /* TestViewController.m */,
 			);
 			path = ARMonopolyNativeCodeBase;
 			sourceTree = "<group>";
@@ -232,6 +244,7 @@
 				A55437A5189CA55C0076AC7D /* Images.xcassets in Resources */,
 				A5543797189CA55C0076AC7D /* InfoPlist.strings in Resources */,
 				A55437A0189CA55C0076AC7D /* Main.storyboard in Resources */,
+				A5D6E4D718A0A8100007F04B /* installPlugin.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A55437A3189CA55C0076AC7D /* ARMViewController.m in Sources */,
+				A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */,
 				A5543799189CA55C0076AC7D /* main.m in Sources */,
-				A554379D189CA55C0076AC7D /* ARMAppDelegate.m in Sources */,
+				A5D259E2189DEDB300E53CBA /* ARMAppController.m in Sources */,
+				A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +475,7 @@
 				A55437BD189CA55C0076AC7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A55437BE189CA55C0076AC7D /* Build configuration list for PBXNativeTarget "ARMonopolyNativeCodeBaseTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +484,7 @@
 				A55437C0189CA55C0076AC7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ARMAppDelegate : UIResponder <UIApplicationDelegate>
+@interface TestAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @end
+
+

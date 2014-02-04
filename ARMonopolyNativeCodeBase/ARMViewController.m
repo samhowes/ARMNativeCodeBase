@@ -1,29 +1,18 @@
-//
-//  ARMViewController.m
-//  ARMonopolyNativeCodeBase
-//
-//  Created by Samuel Howes on 1/31/14.
-//  Copyright (c) 2014 Samuel Howes. All rights reserved.
-//
-
+﻿#import "UnityAppController.h"
 #import "ARMViewController.h"
+#import "iPhone_View.h"
 
-@interface ARMViewController ()
-
-@end
 
 @implementation ARMViewController
 
-- (void)viewDidLoad
+- (void) viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super viewDidLoad];
+	
+	UnityAppController *appDelegate = (UnityAppController *)
+									[[UIApplication sharedApplication] delegate];
+	self.view = (UIView *)appDelegate.unityView;
 }
 
 @end
+
