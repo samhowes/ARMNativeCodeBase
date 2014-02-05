@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50CD63918A2BA0B0001E262 /* StaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50CD63818A2BA0B0001E262 /* StaticTableViewController.m */; };
+		A547A79F18A2A8E700AB9459 /* TestSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A547A79E18A2A8E700AB9459 /* TestSettingsViewController.m */; };
 		A554378D189CA55C0076AC7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A554378C189CA55C0076AC7D /* Foundation.framework */; };
 		A554378F189CA55C0076AC7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A554378E189CA55C0076AC7D /* CoreGraphics.framework */; };
 		A5543791189CA55C0076AC7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5543790189CA55C0076AC7D /* UIKit.framework */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A50CD63718A2BA0B0001E262 /* StaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTableViewController.h; sourceTree = "<group>"; };
+		A50CD63818A2BA0B0001E262 /* StaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewController.m; sourceTree = "<group>"; };
+		A547A79D18A2A8E700AB9459 /* TestSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSettingsViewController.h; sourceTree = "<group>"; };
+		A547A79E18A2A8E700AB9459 /* TestSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSettingsViewController.m; sourceTree = "<group>"; };
 		A5543789189CA55C0076AC7D /* ARMonopolyNativeCodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARMonopolyNativeCodeBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A554378C189CA55C0076AC7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A554378E189CA55C0076AC7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +139,10 @@
 				A5543793189CA55C0076AC7D /* Supporting Files */,
 				A5860D8E18A0A656004A2BE5 /* TestViewController.h */,
 				A5860D8F18A0A656004A2BE5 /* TestViewController.m */,
+				A547A79D18A2A8E700AB9459 /* TestSettingsViewController.h */,
+				A547A79E18A2A8E700AB9459 /* TestSettingsViewController.m */,
+				A50CD63718A2BA0B0001E262 /* StaticTableViewController.h */,
+				A50CD63818A2BA0B0001E262 /* StaticTableViewController.m */,
 			);
 			path = ARMonopolyNativeCodeBase;
 			sourceTree = "<group>";
@@ -276,7 +286,9 @@
 			files = (
 				A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */,
 				A5543799189CA55C0076AC7D /* main.m in Sources */,
+				A50CD63918A2BA0B0001E262 /* StaticTableViewController.m in Sources */,
 				A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */,
+				A547A79F18A2A8E700AB9459 /* TestSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
