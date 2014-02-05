@@ -10,6 +10,9 @@
 
 - (void)createViewHierarchyImpl;
 {
+	/* Manually load the storyboard file
+	 * Instantiate a window, root view controller, and it's root view
+	 */
 	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 	UIViewController *mainVC = [storyBoard instantiateInitialViewController];
 	
@@ -21,4 +24,5 @@
 }
 @end
 
+// Tell unity to replace the AppController with this class
 IMPL_APP_CONTROLLER_SUBCLASS(ARMAppController)
