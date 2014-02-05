@@ -276,6 +276,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fr6-Y3-CP6">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.84999999999999987" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="YCQ-mh-HCj">
                                 <rect key="frame" x="0.0" y="276" width="568" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -296,8 +301,12 @@
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="YCQ-mh-HCj" firstAttribute="leading" secondItem="Fn7-me-azH" secondAttribute="leading" id="GzB-Yb-9wW"/>
+                            <constraint firstItem="fr6-Y3-CP6" firstAttribute="top" secondItem="Fn7-me-azH" secondAttribute="top" id="M06-Yf-5fN"/>
                             <constraint firstItem="z6S-Od-fZk" firstAttribute="top" secondItem="YCQ-mh-HCj" secondAttribute="bottom" id="PDZ-0j-baA"/>
                             <constraint firstAttribute="trailing" secondItem="YCQ-mh-HCj" secondAttribute="trailing" id="W0U-8C-z2s"/>
+                            <constraint firstItem="fr6-Y3-CP6" firstAttribute="leading" secondItem="Fn7-me-azH" secondAttribute="leading" id="ZKJ-17-gdv"/>
+                            <constraint firstAttribute="trailing" secondItem="fr6-Y3-CP6" secondAttribute="trailing" id="kHF-T3-Cdz"/>
+                            <constraint firstItem="z6S-Od-fZk" firstAttribute="top" secondItem="fr6-Y3-CP6" secondAttribute="bottom" id="n2Y-uU-t4a"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -324,6 +333,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="unitySubView" destination="fr6-Y3-CP6" id="abw-aT-pJj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUT-Dm-ipj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

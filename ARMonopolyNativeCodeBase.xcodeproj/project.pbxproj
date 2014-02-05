@@ -42,6 +42,9 @@
 		A50CD63718A2BA0B0001E262 /* StaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTableViewController.h; sourceTree = "<group>"; };
 		A50CD63818A2BA0B0001E262 /* StaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewController.m; sourceTree = "<group>"; };
 		A5284CF818A2CE2000562C1B /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
+		A5284CFB18A2DA1D00562C1B /* UnityAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityAppController.h; sourceTree = "<group>"; };
+		A5284CFC18A2DA1D00562C1B /* UnityAppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityAppController.mm; sourceTree = "<group>"; };
+		A5284CFE18A2DA3200562C1B /* UnityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityView.h; sourceTree = "<group>"; };
 		A547A79D18A2A8E700AB9459 /* TestSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSettingsViewController.h; sourceTree = "<group>"; };
 		A547A79E18A2A8E700AB9459 /* TestSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSettingsViewController.m; sourceTree = "<group>"; };
 		A5543789189CA55C0076AC7D /* ARMonopolyNativeCodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARMonopolyNativeCodeBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5284CFA18A2D9E900562C1B /* Unity */ = {
+			isa = PBXGroup;
+			children = (
+				A5284CFE18A2DA3200562C1B /* UnityView.h */,
+				A5284CFB18A2DA1D00562C1B /* UnityAppController.h */,
+				A5284CFC18A2DA1D00562C1B /* UnityAppController.mm */,
+			);
+			name = Unity;
+			sourceTree = "<group>";
+		};
+		A5284CFF18A2DA8B00562C1B /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				A547A79D18A2A8E700AB9459 /* TestSettingsViewController.h */,
+				A547A79E18A2A8E700AB9459 /* TestSettingsViewController.m */,
+			);
+			name = Unused;
+			sourceTree = "<group>";
+		};
+		A5284D0018A2DAB500562C1B /* DevClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A5860D9418A0A790004A2BE5 /* TestAppDelegate.h */,
+				A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */,
+				A5860D8E18A0A656004A2BE5 /* TestViewController.h */,
+				A5860D8F18A0A656004A2BE5 /* TestViewController.m */,
+			);
+			name = DevClasses;
+			sourceTree = "<group>";
+		};
+		A5284D0118A2DACF00562C1B /* DeployClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A5D259E4189DEE4900E53CBA /* ARMViewController.m */,
+				A5D259DF189DEDB300E53CBA /* ARMAppController.h */,
+				A5D259E0189DEDB300E53CBA /* ARMAppController.m */,
+				A55437A1189CA55C0076AC7D /* ARMViewController.h */,
+			);
+			name = DeployClasses;
+			sourceTree = "<group>";
+		};
 		A5543780189CA55C0076AC7D = {
 			isa = PBXGroup;
 			children = (
@@ -128,24 +172,18 @@
 		A5543792189CA55C0076AC7D /* ARMonopolyNativeCodeBase */ = {
 			isa = PBXGroup;
 			children = (
+				A5284CFF18A2DA8B00562C1B /* Unused */,
+				A5284CFA18A2D9E900562C1B /* Unity */,
 				A5D6E4D818A0AD7D0007F04B /* Graphics */,
-				A5D6E4D618A0A8100007F04B /* installPlugin.sh */,
-				A5860D9418A0A790004A2BE5 /* TestAppDelegate.h */,
-				A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */,
-				A5D259E4189DEE4900E53CBA /* ARMViewController.m */,
-				A5D259DF189DEDB300E53CBA /* ARMAppController.h */,
-				A5D259E0189DEDB300E53CBA /* ARMAppController.m */,
+				A5284D0018A2DAB500562C1B /* DevClasses */,
+				A5284D0118A2DACF00562C1B /* DeployClasses */,
 				A554379E189CA55C0076AC7D /* Main.storyboard */,
-				A55437A1189CA55C0076AC7D /* ARMViewController.h */,
+				A5D6E4D618A0A8100007F04B /* installPlugin.sh */,
 				A55437A4189CA55C0076AC7D /* Images.xcassets */,
-				A5543793189CA55C0076AC7D /* Supporting Files */,
-				A5860D8E18A0A656004A2BE5 /* TestViewController.h */,
-				A5860D8F18A0A656004A2BE5 /* TestViewController.m */,
-				A547A79D18A2A8E700AB9459 /* TestSettingsViewController.h */,
-				A547A79E18A2A8E700AB9459 /* TestSettingsViewController.m */,
 				A50CD63718A2BA0B0001E262 /* StaticTableViewController.h */,
 				A50CD63818A2BA0B0001E262 /* StaticTableViewController.m */,
 				A5284CF818A2CE2000562C1B /* Notes.txt */,
+				A5543793189CA55C0076AC7D /* Supporting Files */,
 			);
 			path = ARMonopolyNativeCodeBase;
 			sourceTree = "<group>";

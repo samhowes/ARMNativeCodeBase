@@ -57,7 +57,7 @@
 	[self swapNavigationBackgound]; // switch the navigation bar from what it was before to translucent.
 }
 
-- (void) viewWillDisappear:(BOOL)animated
+- (void) viewDidDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
 	[self swapNavigationBackgound]; 		// switch the navigation bar from translucent to what it was before.
