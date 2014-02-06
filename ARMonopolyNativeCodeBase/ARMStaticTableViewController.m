@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Samuel Howes. All rights reserved.
 //
 
-#import "StaticTableViewController.h"
+#import "ARMStaticTableViewController.h"
 
-@interface StaticTableViewController ()
+@interface ARMStaticTableViewController ()
 
 @end
 
-@implementation StaticTableViewController
+@implementation ARMStaticTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

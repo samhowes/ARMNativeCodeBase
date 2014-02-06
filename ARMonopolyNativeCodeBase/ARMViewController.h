@@ -5,7 +5,7 @@
 
 // I'm using the "arm" prefix here to make sure that I don't
 // conflict with any unity names.
-@property (weak, nonatomic) IBOutlet UIView *armUnitySubView;
+@property (strong, nonatomic) IBOutlet UIView *armUnitySubView;
 
 @end
 

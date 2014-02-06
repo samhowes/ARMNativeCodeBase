@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A50CD63918A2BA0B0001E262 /* StaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50CD63818A2BA0B0001E262 /* StaticTableViewController.m */; };
+		A50CD63918A2BA0B0001E262 /* ARMStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50CD63818A2BA0B0001E262 /* ARMStaticTableViewController.m */; };
 		A5284CF918A2CE2000562C1B /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5284CF818A2CE2000562C1B /* Notes.txt */; };
 		A547A79F18A2A8E700AB9459 /* TestSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A547A79E18A2A8E700AB9459 /* TestSettingsViewController.m */; };
 		A554378D189CA55C0076AC7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A554378C189CA55C0076AC7D /* Foundation.framework */; };
@@ -39,8 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A50CD63718A2BA0B0001E262 /* StaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTableViewController.h; sourceTree = "<group>"; };
-		A50CD63818A2BA0B0001E262 /* StaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewController.m; sourceTree = "<group>"; };
+		A50CD63718A2BA0B0001E262 /* ARMStaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMStaticTableViewController.h; sourceTree = "<group>"; };
+		A50CD63818A2BA0B0001E262 /* ARMStaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARMStaticTableViewController.m; sourceTree = "<group>"; };
 		A5284CF818A2CE2000562C1B /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		A5284CFB18A2DA1D00562C1B /* UnityAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityAppController.h; sourceTree = "<group>"; };
 		A5284CFC18A2DA1D00562C1B /* UnityAppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityAppController.mm; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 				A554379E189CA55C0076AC7D /* Main.storyboard */,
 				A5D6E4D618A0A8100007F04B /* installPlugin.sh */,
 				A55437A4189CA55C0076AC7D /* Images.xcassets */,
-				A50CD63718A2BA0B0001E262 /* StaticTableViewController.h */,
-				A50CD63818A2BA0B0001E262 /* StaticTableViewController.m */,
+				A50CD63718A2BA0B0001E262 /* ARMStaticTableViewController.h */,
+				A50CD63818A2BA0B0001E262 /* ARMStaticTableViewController.m */,
 				A5284CF818A2CE2000562C1B /* Notes.txt */,
 				A5543793189CA55C0076AC7D /* Supporting Files */,
 			);
@@ -328,7 +328,7 @@
 			files = (
 				A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */,
 				A5543799189CA55C0076AC7D /* main.m in Sources */,
-				A50CD63918A2BA0B0001E262 /* StaticTableViewController.m in Sources */,
+				A50CD63918A2BA0B0001E262 /* ARMStaticTableViewController.m in Sources */,
 				A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */,
 				A547A79F18A2A8E700AB9459 /* TestSettingsViewController.m in Sources */,
 			);

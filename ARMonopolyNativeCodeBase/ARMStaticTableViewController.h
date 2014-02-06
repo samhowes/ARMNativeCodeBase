@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StaticTableViewController : UITableViewController
+@interface ARMStaticTableViewController : UITableViewController
 
 @end
