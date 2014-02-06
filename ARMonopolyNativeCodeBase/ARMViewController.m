@@ -18,7 +18,8 @@
 	
 	UnityAppController *appDelegate = (UnityAppController *)
 									[[UIApplication sharedApplication] delegate];
-	self.armUnitySubView = (UIView *)appDelegate.unityView;
+	[self.view addSubview:(UIView *)appDelegate.unityView];
+	[self.view sendSubviewToBack:appDelegate.unityView];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -40,6 +40,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	self.navigationController.view.backgroundColor = [UIColor whiteColor];
+	self.navigationController.navigationBar.translucent = NO;
+}
 
 
 /*

@@ -38,36 +38,44 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	[super viewWillAppear:animated];
+/*	[super viewWillAppear:animated];
 	//Manually set the navigation bar to be a clear image for this view while storing the original value for later
-	if (!navigationBarBackgroundImage)
+	if (!navigationBarBackgroundImage || !navigationBarShadowImage || !navigationBarBackgroundColor)
 	{
+		// this will set the NEXT value of the navigation bar
 		navigationBarBackgroundImage = [UIImage new];
-	}
-	if (!navigationBarShadowImage)
-	{
 		navigationBarShadowImage = [UIImage new];
-	}
-	if (!navigationBarBackgroundColor)
-	{
-		navigationBarBackgroundColor = [UIColor clearColor];
-		navigationBarIsTranslucent = YES;
+		navigationBarBackgroundColor = [UIColor whiteColor];
+		navigationBarIsTranslucent = NO;
+		
+		//this is the current value of the navigation bar
+		[self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+		self.navigationController.navigationBar.shadowImage = [UIImage new];
+		self.navigationController.view.backgroundColor = [UIColor clearColor];
+		self.navigationController.navigationBar.translucent = YES;
+		return;
 	}
 	
 	[self swapNavigationBackgound]; // switch the navigation bar from what it was before to translucent.
+*/
+	
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+	self.navigationController.navigationBar.shadowImage = [UIImage new];
+	self.navigationController.view.backgroundColor = [UIColor clearColor];
+	self.navigationController.navigationBar.translucent = YES;
 }
 
-- (void) viewDidDisappear:(BOOL)animated
+/*- (void) viewDidDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
-	[self swapNavigationBackgound]; 		// switch the navigation bar from translucent to what it was before.
-	
-}
+	//	[self swapNavigationBackgound]; 		// switch the navigation bar from translucent to what it was before.
+} */
 
 /* Convenience method to swap the background from its previous
  * Value to translucent in this view. This method is called 
  * from viewWillAppear and viewWillDisappear
  */
+/*
 - (void) swapNavigationBackgound
 {
 	// swap all values.
@@ -88,7 +96,7 @@
 	temp = navigationBarIsTranslucent;
 	navigationBarIsTranslucent = self.navigationController.navigationBar.translucent;
 	self.navigationController.navigationBar.translucent = navigationBarIsTranslucent;
-}
+} */
 
 
 - (void)didReceiveMemoryWarning
