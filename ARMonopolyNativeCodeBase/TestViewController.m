@@ -7,24 +7,26 @@
 //
 
 #import "TestViewController.h"
+#import "ARMPlayerInfo.h"
 
 @interface TestViewController ()
-{
-	UIImage *navigationBarBackgroundImage;
-	UIImage *navigationBarShadowImage;
-	UIColor *navigationBarBackgroundColor;
-	BOOL navigationBarIsTranslucent;
-}
+
+@property (strong, nonatomic) ARMPlayerInfo *userData;
+@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
 
 @end
 
 @implementation TestViewController
 
+@synthesize userData;
+
+#pragma mark Lifecycle Methods
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+		userData = [[ARMPlayerInfo alloc] init];
     }
     return self;
 }
@@ -38,71 +40,35 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-/*	[super viewWillAppear:animated];
-	//Manually set the navigation bar to be a clear image for this view while storing the original value for later
-	if (!navigationBarBackgroundImage || !navigationBarShadowImage || !navigationBarBackgroundColor)
-	{
-		// this will set the NEXT value of the navigation bar
-		navigationBarBackgroundImage = [UIImage new];
-		navigationBarShadowImage = [UIImage new];
-		navigationBarBackgroundColor = [UIColor whiteColor];
-		navigationBarIsTranslucent = NO;
-		
-		//this is the current value of the navigation bar
-		[self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-		self.navigationController.navigationBar.shadowImage = [UIImage new];
-		self.navigationController.view.backgroundColor = [UIColor clearColor];
-		self.navigationController.navigationBar.translucent = YES;
-		return;
-	}
-	
-	[self swapNavigationBackgound]; // switch the navigation bar from what it was before to translucent.
-*/
-	
+	[super viewWillAppear:animated];
+
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 	self.navigationController.navigationBar.shadowImage = [UIImage new];
 	self.navigationController.view.backgroundColor = [UIColor clearColor];
 	self.navigationController.navigationBar.translucent = YES;
 }
 
-/*- (void) viewDidDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-	//	[self swapNavigationBackgound]; 		// switch the navigation bar from translucent to what it was before.
-} */
-
-/* Convenience method to swap the background from its previous
- * Value to translucent in this view. This method is called 
- * from viewWillAppear and viewWillDisappear
- */
-/*
-- (void) swapNavigationBackgound
-{
-	// swap all values.
-	id swapPointer;
-	BOOL temp;
-	swapPointer = navigationBarBackgroundImage;
-	navigationBarBackgroundImage = [self.navigationController.navigationBar backgroundImageForBarMetrics:UIBarMetricsDefault];
-	[self.navigationController.navigationBar setBackgroundImage:swapPointer forBarMetrics:UIBarMetricsDefault];
-	
-	swapPointer = navigationBarShadowImage;
-	navigationBarShadowImage = self.navigationController.navigationBar.shadowImage;
-	self.navigationController.navigationBar.shadowImage = swapPointer;
-	
-	swapPointer = navigationBarBackgroundColor;
-	navigationBarBackgroundColor = self.navigationController.view.backgroundColor;
-	self.navigationController.view.backgroundColor = swapPointer;
-	
-	temp = navigationBarIsTranslucent;
-	navigationBarIsTranslucent = self.navigationController.navigationBar.translucent;
-	self.navigationController.navigationBar.translucent = navigationBarIsTranslucent;
-} */
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if (sender != self.settingsButton) return;
+	
+	if (!userData)
+	{
+		userData = [[ARMPlayerInfo alloc] init];
+	}
+	// Make sure the Settings Controller modifies our copy of the user data
+	if ([[segue destinationViewController] userData] != userData)
+	{
+		[[segue destinationViewController] setUserData: userData];
+	}
+	
+}
+
 
 @end

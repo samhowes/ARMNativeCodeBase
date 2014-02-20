@@ -31,6 +31,7 @@ sed 's/property="unitySubView"/property="armUnitySubView"/g' $COMPILE_DIR$STORYB
 cp temp.xml $COMPILE_DIR$STORYBOARD
 rm temp.xml
 
-
+## Regex to add [super layoutSubviews];
+#-\s*\(void\)layoutSubviews\s*\{([^\}].*\s)*
 
 ### Plugin installed!

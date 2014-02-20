@@ -7,12 +7,16 @@
 //
 
 #import "ARMStaticTableViewController.h"
+#import "ARMPlayerInfo.h"
 
 @interface ARMStaticTableViewController ()
-
 @end
 
 @implementation ARMStaticTableViewController
+
+@synthesize userDisplayStringTextField;
+@synthesize userDisplayImageView;
+@synthesize userData;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,6 +49,20 @@
 	[super viewDidAppear:animated];
 	self.navigationController.view.backgroundColor = [UIColor whiteColor];
 	self.navigationController.navigationBar.translucent = NO;
+	
+	
+}
+
+/* Delegate functions */
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	if (textField != userDisplayStringTextField)
+	{
+		return NO;
+	}
+	[userData setPlayerDisplayName:[textField text]];
+	[textField resignFirstResponder];
+	return YES;
 }
 
 

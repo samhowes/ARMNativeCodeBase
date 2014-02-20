@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ARMPlayerInfo.h"
 
-@interface ARMStaticTableViewController : UITableViewController
+@interface ARMStaticTableViewController : UITableViewController <UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *userDisplayStringTextField;
+@property (strong, nonatomic) IBOutlet UIImageView *userDisplayImageView;
+
+@property (strong, nonatomic) ARMPlayerInfo *userData;
 
 @end
