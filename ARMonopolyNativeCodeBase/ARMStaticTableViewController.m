@@ -6,10 +6,14 @@
 //  Copyright (c) 2014 Samuel Howes. All rights reserved.
 //
 
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "ARMStaticTableViewController.h"
 #import "ARMPlayerInfo.h"
 
 @interface ARMStaticTableViewController ()
+
+@property UIImagePickerController *cameraUI;
+
 @end
 
 @implementation ARMStaticTableViewController
@@ -17,12 +21,16 @@
 @synthesize userDisplayStringTextField;
 @synthesize userDisplayImageView;
 @synthesize userData;
+@synthesize cameraToolbar;
+@synthesize cameraUI;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+		
     }
     return self;
 }
@@ -30,6 +38,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	cameraToolbar.clipsToBounds = YES; // Remove the top border of the toolbar
+	[userDisplayImageView.layer setBorderColor:[[UIColor grayColor] CGColor]]; // add a border to the image view
+	[userDisplayImageView.layer setBorderWidth:1.0];
+
+	if (userData && [userData playerDisplayName]) {
+		[userDisplayStringTextField setText:[userData playerDisplayName]];
+	}
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -53,7 +69,9 @@
 	
 }
 
-/* Delegate functions */
+/****************************************************************************/
+/*							UI protocols									*/
+/****************************************************************************/
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	if (textField != userDisplayStringTextField)
@@ -64,6 +82,91 @@
 	[textField resignFirstResponder];
 	return YES;
 }
+
+
+- (IBAction)cameraButtonWasPressed:(id)sender {
+	UIActionSheet *chooseImageActionSheeet =
+		[[UIActionSheet alloc] initWithTitle:nil delegate:self
+						   cancelButtonTitle:@"Cancel"
+					  destructiveButtonTitle:nil
+						   otherButtonTitles:@"Take Photo", @"Choose Existing", nil];
+
+	[chooseImageActionSheeet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	NSLog(@"Button at index: %ld was pressed", (long)buttonIndex);
+	switch (buttonIndex) {
+		case 0: 			// Take Photo
+			[self showImagePickerForSourceType:UIImagePickerControllerSourceTypeCamera];
+			break;
+		case 1:				// Choose photo
+			[self showImagePickerForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+			break;
+		case 2: 			// Cancel
+			break;
+			
+		default:
+			break;
+	}
+}
+
+- (void)showImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
+{
+	cameraUI = [[UIImagePickerController alloc] init];
+	cameraUI.sourceType = sourceType;
+	//imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
+	
+	cameraUI.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
+	cameraUI.allowsEditing = YES;
+	cameraUI.delegate = self;
+	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+	[self presentViewController:cameraUI animated:YES completion:nil];
+}
+
+
+#pragma mark - UIImagePickerControllerDelegate Methods
+/****************************************************************************/
+/*					UIImagePickerControllerDelegate							*/
+/****************************************************************************/
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissViewControllerAnimated:YES completion:nil];
+	[[UIApplication sharedApplication] setStatusBarHidden:NO];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+	NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+	UIImage *originalImage, *editedImage, *imageToSave;
+	
+	if (CFStringCompare((CFStringRef)mediaType, kUTTypeImage, 0) == kCFCompareEqualTo)
+	{
+		editedImage = 	(UIImage *)[info objectForKey:UIImagePickerControllerEditedImage];
+		originalImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
+		if (editedImage) {
+			imageToSave = editedImage;
+		} else {
+			imageToSave = originalImage;
+		}
+		
+		// Save the new image to the camera roll
+		userDisplayImageView.image = imageToSave;
+		[userData setPlayerDisplayImage:imageToSave];
+	}
+	
+	if (CFStringCompare ((CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo)
+	{
+		NSLog(@"Error: movie encounterd as a result of the image picker!");
+	}
+	
+	[self dismissViewControllerAnimated:YES completion:nil];
+	[[UIApplication sharedApplication] setStatusBarHidden:NO];
+	cameraUI = nil;
+}
+
 
 
 /*

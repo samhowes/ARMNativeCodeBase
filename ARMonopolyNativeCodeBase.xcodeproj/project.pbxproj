@@ -22,6 +22,7 @@
 		A55437AE189CA55C0076AC7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5543790189CA55C0076AC7D /* UIKit.framework */; };
 		A55437B6189CA55C0076AC7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A55437B4189CA55C0076AC7D /* InfoPlist.strings */; };
 		A55437B8189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A55437B7189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m */; };
+		A57F97A818B7E2F6007EB732 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57F97A718B7E2F6007EB732 /* MobileCoreServices.framework */; };
 		A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5860D8F18A0A656004A2BE5 /* TestViewController.m */; };
 		A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */; };
 		A5D6E4D718A0A8100007F04B /* installPlugin.sh in Resources */ = {isa = PBXBuildFile; fileRef = A5D6E4D618A0A8100007F04B /* installPlugin.sh */; };
@@ -66,6 +67,7 @@
 		A55437B3189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARMonopolyNativeCodeBaseTests-Info.plist"; sourceTree = "<group>"; };
 		A55437B5189CA55C0076AC7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A55437B7189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMonopolyNativeCodeBaseTests.m; sourceTree = "<group>"; };
+		A57F97A718B7E2F6007EB732 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A5860D8E18A0A656004A2BE5 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		A5860D8F18A0A656004A2BE5 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		A5860D9418A0A790004A2BE5 /* TestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A57F97A818B7E2F6007EB732 /* MobileCoreServices.framework in Frameworks */,
 				A554378F189CA55C0076AC7D /* CoreGraphics.framework in Frameworks */,
 				A5543791189CA55C0076AC7D /* UIKit.framework in Frameworks */,
 				A554378D189CA55C0076AC7D /* Foundation.framework in Frameworks */,
@@ -164,6 +167,7 @@
 		A554378B189CA55C0076AC7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A57F97A718B7E2F6007EB732 /* MobileCoreServices.framework */,
 				A554378C189CA55C0076AC7D /* Foundation.framework */,
 				A554378E189CA55C0076AC7D /* CoreGraphics.framework */,
 				A5543790189CA55C0076AC7D /* UIKit.framework */,
@@ -178,17 +182,17 @@
 				A5284CFF18A2DA8B00562C1B /* Unused */,
 				A5284CFA18A2D9E900562C1B /* Unity */,
 				A5D6E4D818A0AD7D0007F04B /* Graphics */,
+				A50CD63718A2BA0B0001E262 /* ARMStaticTableViewController.h */,
+				A50CD63818A2BA0B0001E262 /* ARMStaticTableViewController.m */,
+				A547110718A704C700D47A75 /* ARMPlayerInfo.h */,
+				A547110818A704C700D47A75 /* ARMPlayerInfo.m */,
 				A5284D0018A2DAB500562C1B /* DevClasses */,
 				A5284D0118A2DACF00562C1B /* DeployClasses */,
 				A554379E189CA55C0076AC7D /* Main.storyboard */,
 				A5D6E4D618A0A8100007F04B /* installPlugin.sh */,
 				A55437A4189CA55C0076AC7D /* Images.xcassets */,
-				A50CD63718A2BA0B0001E262 /* ARMStaticTableViewController.h */,
-				A50CD63818A2BA0B0001E262 /* ARMStaticTableViewController.m */,
 				A5284CF818A2CE2000562C1B /* Notes.txt */,
 				A5543793189CA55C0076AC7D /* Supporting Files */,
-				A547110718A704C700D47A75 /* ARMPlayerInfo.h */,
-				A547110818A704C700D47A75 /* ARMPlayerInfo.m */,
 			);
 			path = ARMonopolyNativeCodeBase;
 			sourceTree = "<group>";

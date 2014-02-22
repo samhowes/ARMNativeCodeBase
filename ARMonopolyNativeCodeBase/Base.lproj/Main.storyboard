@@ -57,36 +57,47 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lST-ik-b2b">
-                                                    <rect key="frame" x="183" y="0.0" width="117" height="117"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO.png" translatesAutoresizingMaskIntoConstraints="NO" id="lST-ik-b2b">
+                                                    <rect key="frame" x="156" y="0.0" width="117" height="117"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="117" id="Bqo-Xk-bbb"/>
-                                                        <constraint firstAttribute="height" constant="117" id="ogX-EU-LqU"/>
+                                                        <constraint firstAttribute="width" constant="117" id="b2H-jf-J6i"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="542-o7-Aaf">
-                                                    <rect key="frame" x="20" y="48" width="92" height="21"/>
+                                                    <rect key="frame" x="20" y="20" width="92" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38a-aB-Udo">
-                                                    <rect key="frame" x="25" y="67" width="83" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38a-aB-Udo">
+                                                    <rect key="frame" x="25" y="67" width="22" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <state key="normal" title="Take picture">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
                                                 </button>
+                                                <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdN-gE-TxO">
+                                                    <rect key="frame" x="38" y="56" width="56" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                    <items>
+                                                        <barButtonItem systemItem="camera" id="KW0-Xd-AcZ">
+                                                            <connections>
+                                                                <action selector="cameraButtonWasPressed:" destination="eaQ-Tk-guP" id="uZe-2h-RrX"/>
+                                                            </connections>
+                                                        </barButtonItem>
+                                                    </items>
+                                                </toolbar>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="542-o7-Aaf" firstAttribute="leading" secondItem="9Bw-eA-EA6" secondAttribute="leading" constant="20" id="0zf-oM-fIv"/>
                                                 <constraint firstAttribute="bottom" secondItem="lST-ik-b2b" secondAttribute="bottom" id="6wP-nY-NHL"/>
-                                                <constraint firstAttribute="centerY" secondItem="542-o7-Aaf" secondAttribute="centerY" id="DCy-sL-q5G"/>
-                                                <constraint firstItem="lST-ik-b2b" firstAttribute="leading" secondItem="542-o7-Aaf" secondAttribute="trailing" constant="71" id="Va6-vy-G7G"/>
-                                                <constraint firstAttribute="centerY" secondItem="lST-ik-b2b" secondAttribute="centerY" id="ctV-CW-o9p"/>
+                                                <constraint firstAttribute="trailing" secondItem="lST-ik-b2b" secondAttribute="trailing" constant="47" id="87q-qZ-hFM"/>
+                                                <constraint firstItem="cdN-gE-TxO" firstAttribute="leading" secondItem="9Bw-eA-EA6" secondAttribute="leading" constant="38" id="L8M-Yy-Kvi"/>
+                                                <constraint firstItem="lST-ik-b2b" firstAttribute="leading" secondItem="cdN-gE-TxO" secondAttribute="trailing" constant="62" id="O35-vb-W0c"/>
+                                                <constraint firstItem="cdN-gE-TxO" firstAttribute="top" secondItem="542-o7-Aaf" secondAttribute="bottom" constant="15" id="O9S-ya-T6L"/>
+                                                <constraint firstItem="lST-ik-b2b" firstAttribute="leading" secondItem="542-o7-Aaf" secondAttribute="trailing" constant="44" id="Va6-vy-G7G"/>
                                                 <constraint firstItem="lST-ik-b2b" firstAttribute="top" secondItem="9Bw-eA-EA6" secondAttribute="top" id="dn9-0k-gOa"/>
+                                                <constraint firstItem="542-o7-Aaf" firstAttribute="top" secondItem="9Bw-eA-EA6" secondAttribute="top" constant="20" id="feq-Zi-vav"/>
+                                                <constraint firstAttribute="bottom" secondItem="cdN-gE-TxO" secondAttribute="bottom" constant="17" id="v6h-wo-dR2"/>
+                                                <constraint firstItem="lST-ik-b2b" firstAttribute="top" secondItem="9Bw-eA-EA6" secondAttribute="top" id="xhA-9G-f0E"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -260,10 +271,13 @@
                             <outlet property="delegate" destination="eaQ-Tk-guP" id="V4c-6O-Rau"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Settings" id="9Z8-wm-Pft"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="cameraToolbar" destination="cdN-gE-TxO" id="k9V-KO-KhF"/>
                         <outlet property="userDisplayImageView" destination="lST-ik-b2b" id="i9q-Qj-sZ0"/>
                         <outlet property="userDisplayStringTextField" destination="CUq-SY-rS9" id="547-3r-UQz"/>
                     </connections>
@@ -365,6 +379,9 @@
             <point key="canvasLocation" x="-588" y="242"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LOGO.png" width="668" height="578"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

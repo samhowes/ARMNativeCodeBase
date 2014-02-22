@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ARMPlayerInfo.h"
 
-@interface ARMStaticTableViewController : UITableViewController <UITextFieldDelegate>
+@interface ARMStaticTableViewController : UITableViewController
+	<UITextFieldDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *userDisplayStringTextField;
 @property (strong, nonatomic) IBOutlet UIImageView *userDisplayImageView;
+@property (weak, nonatomic) IBOutlet UIToolbar *cameraToolbar;
 
 @property (strong, nonatomic) ARMPlayerInfo *userData;
 

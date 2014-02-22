@@ -11,7 +11,7 @@
 @implementation ARMPlayerInfo
 
 @synthesize playerDisplayName;
-@synthesize playerDisplayImagePath;
+@synthesize playerDisplayImage;
 @synthesize gameTileBluetoothID;
 @synthesize sessionID;
 @synthesize playersInSession;

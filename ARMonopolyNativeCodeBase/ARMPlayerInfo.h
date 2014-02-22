@@ -14,7 +14,7 @@
 // Local Player info
 @property NSString *playerDisplayName;
 
-@property NSString *playerDisplayImagePath;
+@property UIImage *playerDisplayImage;
 
 @property NSString *gameTileBluetoothID;
 
