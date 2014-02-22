@@ -96,7 +96,6 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	NSLog(@"Button at index: %ld was pressed", (long)buttonIndex);
 	switch (buttonIndex) {
 		case 0: 			// Take Photo
 			[self showImagePickerForSourceType:UIImagePickerControllerSourceTypeCamera];
