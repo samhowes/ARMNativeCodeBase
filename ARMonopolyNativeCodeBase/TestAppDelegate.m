@@ -15,6 +15,22 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder
+{
+	return YES;
+}
+
+- (void)application:(UIApplication *)application willEncodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    // encode any state at the app delegate level
+}
+
+
+- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder
+{
+	return YES;
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

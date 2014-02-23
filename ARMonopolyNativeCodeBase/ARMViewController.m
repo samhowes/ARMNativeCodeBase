@@ -13,6 +13,7 @@
 									[[UIApplication sharedApplication] delegate];
 	[self.view addSubview:(UIView *)appDelegate.unityView];
 	[self.view sendSubviewToBack:appDelegate.unityView];
+	_unityView = appDelegate.unityView;
 }
 
 - (void)viewWillAppear:(BOOL)animated

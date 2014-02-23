@@ -289,7 +289,7 @@
         <!--Test View Controller-->
         <scene sceneID="pjG-Xz-nMI">
             <objects>
-                <viewController id="6Tw-Ot-IhD" customClass="TestViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayModeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Tw-Ot-IhD" customClass="TestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lit-mI-gP3"/>
                         <viewControllerLayoutGuide type="bottom" id="z6S-Od-fZk"/>
@@ -357,7 +357,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Zen-tE-DMd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SnH-7D-jqJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SnH-7D-jqJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>

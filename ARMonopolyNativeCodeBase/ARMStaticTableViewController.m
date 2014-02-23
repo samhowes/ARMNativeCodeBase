@@ -42,9 +42,20 @@
 	cameraToolbar.clipsToBounds = YES; // Remove the top border of the toolbar
 	[userDisplayImageView.layer setBorderColor:[[UIColor grayColor] CGColor]]; // add a border to the image view
 	[userDisplayImageView.layer setBorderWidth:1.0];
-
-	if (userData && [userData playerDisplayName]) {
-		[userDisplayStringTextField setText:[userData playerDisplayName]];
+	
+	
+	if (userData) {
+		if ([userData playerDisplayName])
+		{
+			[userDisplayStringTextField setText:[userData playerDisplayName]];
+		}
+		if ([userData playerDisplayImage])
+		{
+			userDisplayImageView.image = [userData playerDisplayImage];
+		}
+		
+	} else {
+		userData = [[ARMPlayerInfo alloc] init];
 	}
 
     // Uncomment the following line to preserve selection between presentations.

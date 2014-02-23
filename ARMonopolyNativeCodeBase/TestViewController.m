@@ -9,6 +9,9 @@
 #import "TestViewController.h"
 #import "ARMPlayerInfo.h"
 
+static NSString *kUserDataKey = @"userDataKey";
+
+
 @interface TestViewController ()
 
 @property (strong, nonatomic) ARMPlayerInfo *userData;
@@ -70,5 +73,38 @@
 	
 }
 
+#pragma mark - UIStateRestoration
+
+// this is called when the app is suspended to the background
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    NSLog(@"MyViewController: encodeRestorableStateWithCoder");
+    
+    [super encodeRestorableStateWithCoder:coder];
+    
+    // encode only its UUID (identifier), and later we get back the item by searching for its UUID
+    [coder encodeObject:self.userData forKey:kUserDataKey];
+}
+
+// this is called when the app is re-launched
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    // important: don't affect our views just yet, we might not visible or we aren't the current
+    // view controller, save off our ivars and restore our text view in viewWillAppear
+    //
+    NSLog(@"MyViewController: decodeRestorableStateWithCoder");
+    
+    [super decodeRestorableStateWithCoder:coder];
+    
+    // decode the edited item
+    if ([coder containsValueForKey:kUserDataKey])
+    {
+        // unarchive the UUID (identifier) and search for the item by its UUID
+		self.userData = [coder decodeObjectForKey:kUserDataKey];
+		//        NSString *identifier = [coder decodeObjectForKey:kUnsavedItemKey];
+        //self.item = [[DataSource sharedInstance] itemWithIdentifier:identifier];
+        //[self setupWithItem];
+    }
+}
 
 @end

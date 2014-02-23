@@ -17,19 +17,36 @@
 @synthesize playersInSession;
 
 
-- (id) init
+- (NSArray *)keysForEncoding;
+{
+	return [NSArray arrayWithObjects:@"playerDisplayName",
+			@"playerDisplayImage", @"gameTileBluetoothID", nil];
+}
+
+- (id)init
 {
 	self = [super init];
 	if (self) {
-		[self loadSavedData];
 		playersInSession = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
 
-- (void) loadSavedData
+// We are asked to be archived, encode our data
+- (void)encodeWithCoder:(NSCoder *)encoder
 {
-	// Load the persistent data on the device
+	for (NSString *key in self.keysForEncoding)
+	{
+		[encoder encodeObject:[self valueForKey:key] forKey:key];
+	}
+}
+
+- (void)initWithCoder:(NSCoder *)decoder
+{
+	for (NSString *key in self.keysForEncoding)
+	{
+		[self setValue:[decoder decodeObjectForKey:key] forKey:key];
+	}
 }
 
 @end
