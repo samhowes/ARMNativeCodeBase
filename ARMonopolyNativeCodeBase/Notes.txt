@@ -1,3 +1,20 @@
-UserDataModel Notes:
- - Task: Save user data so that it is persistent between sessions
+
+Notes:
+
+Tasks:
+ R Integrate data model changes into Unity
+ R Integrate Bluetooth
+ R Integrate Networking/Create a networking implementation
+ - Separate the settings screen into three individual views
+ - Do the artwork for the App Icon and loading screens
+ - Add user hints about configuration
+
+Bugs:
+ - Changing the orientation fails
+
+
+DONE:
+Implement the user data model
+
+
 
