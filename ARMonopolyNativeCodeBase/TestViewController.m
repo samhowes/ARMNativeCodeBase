@@ -9,9 +9,6 @@
 #import "TestViewController.h"
 #import "ARMPlayerInfo.h"
 
-static NSString *kUserDataKey = @"userDataKey";
-
-
 @interface TestViewController ()
 
 @property (strong, nonatomic) ARMPlayerInfo *userData;
