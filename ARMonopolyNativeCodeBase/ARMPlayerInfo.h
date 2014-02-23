@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface ARMPlayerInfo : NSObject
+@interface ARMPlayerInfo : NSObject <NSCoding>
 
 // Local Player info
 @property NSString *playerDisplayName;

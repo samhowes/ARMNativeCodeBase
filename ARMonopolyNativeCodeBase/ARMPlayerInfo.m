@@ -8,6 +8,7 @@
 
 #import "ARMPlayerInfo.h"
 
+
 @implementation ARMPlayerInfo
 
 @synthesize playerDisplayName;
@@ -15,6 +16,7 @@
 @synthesize gameTileBluetoothID;
 @synthesize sessionID;
 @synthesize playersInSession;
+
 
 
 - (NSArray *)keysForEncoding;
@@ -41,12 +43,17 @@
 	}
 }
 
-- (void)initWithCoder:(NSCoder *)decoder
+- (id)initWithCoder:(NSCoder *)decoder
 {
-	for (NSString *key in self.keysForEncoding)
-	{
-		[self setValue:[decoder decodeObjectForKey:key] forKey:key];
+	self = [super init];
+	if (self) {
+		for (NSString *key in self.keysForEncoding)
+		{
+			[self setValue:[decoder decodeObjectForKey:key] forKey:key];
+		}
 	}
+	return self;
 }
+
 
 @end
