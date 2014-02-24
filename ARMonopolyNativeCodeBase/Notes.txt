@@ -1,10 +1,11 @@
 
 Notes:
+ - By adding the unity subview to ARMViewController in ARMAppController:createViewHierarchyImpl, I don't have to have Test/ARMViewcontroller classes, and can just have one production class.
 
 Tasks:
- R Integrate data model changes into Unity
  R Integrate Bluetooth
  R Integrate Networking/Create a networking implementation
+ R Integrate New unity code ??
  - Separate the settings screen into three individual views
  - Do the artwork for the App Icon and loading screens
  - Add user hints about configuration
@@ -15,6 +16,6 @@ Bugs:
 
 DONE:
 Implement the user data model
-
+Integrate data model changes into Unity
 
 

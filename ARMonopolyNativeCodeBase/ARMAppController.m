@@ -2,7 +2,7 @@
 #import "UnityAppController.h"
 #import "UI/UnityView.h"
 #import "ARMAppController.h"
-//#import "ARMViewController.h"
+#import "ARMViewController.h"
 
 @implementation ARMAppController
 
@@ -19,9 +19,30 @@
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = mainVC;
 	
+	for (UIViewController*vc in [(UINavigationController *)mainVC viewControllers])
+	{
+		if ([vc isKindOfClass: [ARMViewController class]])
+		{
+			[vc.view addSubview:_unityView];
+			[vc.view sendSubviewToBack:_unityView];
+			break;
+		}
+	}
+	
 	_rootController = [self.window rootViewController];
 	_rootView = _rootController.view;
 }
+
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder
+{
+	return YES;
+}
+
+- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder
+{
+	return YES;
+}
+
 @end
 
 // Tell unity to replace the AppController with this class

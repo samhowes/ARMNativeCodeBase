@@ -9,7 +9,8 @@ STORYBOARD="Main.storyboard"
 PLUGIN_FILES="ARMViewController.h ARMViewController.m \
 ARMAppController.h ARMAppController.m \
 Base.lproj/Main.storyboard \
-ARMStaticTableViewController.h ARMStaticTableViewController.m"
+ARMStaticTableViewController.h ARMStaticTableViewController.m \
+ARMPlayerInfo.m ARMPlayerInfo.h"
 
 COMPILE_DIR="../../ARMonopolyNative/Libraries/"
 
