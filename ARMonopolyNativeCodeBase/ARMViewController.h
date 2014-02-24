@@ -1,7 +1,13 @@
-﻿#import <UIKit/UIKit.h>
-#import "iPhone_View.h"
+//
+//  TestViewController.h
+//  ARMonopolyNativeCodeBase
+//
+//  Created by Samuel Howes on 2/3/14.
+//  Copyright (c) 2014 Samuel Howes. All rights reserved.
+//
 
-@interface ARMViewController : UnityDefaultViewController
+#import <UIKit/UIKit.h>
+
+@interface ARMViewController : UIViewController
 
 @end
-

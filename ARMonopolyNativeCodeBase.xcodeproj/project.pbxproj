@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A50CD63918A2BA0B0001E262 /* ARMStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50CD63818A2BA0B0001E262 /* ARMStaticTableViewController.m */; };
 		A5284CF918A2CE2000562C1B /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5284CF818A2CE2000562C1B /* Notes.txt */; };
+		A52EBE5518BADE4100B054A6 /* ARMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D259E4189DEE4900E53CBA /* ARMViewController.m */; };
 		A547A79F18A2A8E700AB9459 /* TestSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A547A79E18A2A8E700AB9459 /* TestSettingsViewController.m */; };
 		A554378D189CA55C0076AC7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A554378C189CA55C0076AC7D /* Foundation.framework */; };
 		A554378F189CA55C0076AC7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A554378E189CA55C0076AC7D /* CoreGraphics.framework */; };
@@ -23,7 +24,6 @@
 		A55437B6189CA55C0076AC7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A55437B4189CA55C0076AC7D /* InfoPlist.strings */; };
 		A55437B8189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A55437B7189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m */; };
 		A57F97A818B7E2F6007EB732 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57F97A718B7E2F6007EB732 /* MobileCoreServices.framework */; };
-		A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5860D8F18A0A656004A2BE5 /* TestViewController.m */; };
 		A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */; };
 		A5D6E4D718A0A8100007F04B /* installPlugin.sh in Resources */ = {isa = PBXBuildFile; fileRef = A5D6E4D618A0A8100007F04B /* installPlugin.sh */; };
 		A5D6E4DA18A0B2680007F04B /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D6E4D918A0AD950007F04B /* LOGO.png */; };
@@ -68,8 +68,6 @@
 		A55437B5189CA55C0076AC7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A55437B7189CA55C0076AC7D /* ARMonopolyNativeCodeBaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMonopolyNativeCodeBaseTests.m; sourceTree = "<group>"; };
 		A57F97A718B7E2F6007EB732 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		A5860D8E18A0A656004A2BE5 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		A5860D8F18A0A656004A2BE5 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		A5860D9418A0A790004A2BE5 /* TestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppDelegate.h; sourceTree = "<group>"; };
 		A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppDelegate.m; sourceTree = "<group>"; };
 		A5D259DF189DEDB300E53CBA /* ARMAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARMAppController.h; sourceTree = "<group>"; };
@@ -128,8 +126,6 @@
 			children = (
 				A5860D9418A0A790004A2BE5 /* TestAppDelegate.h */,
 				A5860D9518A0A790004A2BE5 /* TestAppDelegate.m */,
-				A5860D8E18A0A656004A2BE5 /* TestViewController.h */,
-				A5860D8F18A0A656004A2BE5 /* TestViewController.m */,
 			);
 			name = DevClasses;
 			sourceTree = "<group>";
@@ -137,10 +133,8 @@
 		A5284D0118A2DACF00562C1B /* DeployClasses */ = {
 			isa = PBXGroup;
 			children = (
-				A5D259E4189DEE4900E53CBA /* ARMViewController.m */,
 				A5D259DF189DEDB300E53CBA /* ARMAppController.h */,
 				A5D259E0189DEDB300E53CBA /* ARMAppController.m */,
-				A55437A1189CA55C0076AC7D /* ARMViewController.h */,
 			);
 			name = DeployClasses;
 			sourceTree = "<group>";
@@ -186,6 +180,8 @@
 				A50CD63818A2BA0B0001E262 /* ARMStaticTableViewController.m */,
 				A547110718A704C700D47A75 /* ARMPlayerInfo.h */,
 				A547110818A704C700D47A75 /* ARMPlayerInfo.m */,
+				A5D259E4189DEE4900E53CBA /* ARMViewController.m */,
+				A55437A1189CA55C0076AC7D /* ARMViewController.h */,
 				A5284D0018A2DAB500562C1B /* DevClasses */,
 				A5284D0118A2DACF00562C1B /* DeployClasses */,
 				A554379E189CA55C0076AC7D /* Main.storyboard */,
@@ -338,9 +334,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5860D9018A0A656004A2BE5 /* TestViewController.m in Sources */,
 				A5543799189CA55C0076AC7D /* main.m in Sources */,
 				A50CD63918A2BA0B0001E262 /* ARMStaticTableViewController.m in Sources */,
+				A52EBE5518BADE4100B054A6 /* ARMViewController.m in Sources */,
 				A5E5BB3C18B662DF00920436 /* ARMPlayerInfo.m in Sources */,
 				A5860D9618A0A790004A2BE5 /* TestAppDelegate.m in Sources */,
 				A547A79F18A2A8E700AB9459 /* TestSettingsViewController.m in Sources */,
